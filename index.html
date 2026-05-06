@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Laa Olshop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Laa Olshop</h1>
+
+<!-- LOGIN -->
+<div class="login">
+<h2>Laa Olshop</h2>
+
+<input placeholder="Nama Lengkap"><br>
+<input placeholder="Alamat"><br>
+<input placeholder="Email/No Hp"><br>
+<input type="password" placeholder="Password"><br>
+
+<button>Login</button>
+</div>
+
+<!-- KATEGORI -->
+<div class="kategori">
+<h2>Menyediakan</h2>
+
+<div class="kolom">
+<h3>Perlengkapan Sekolah</h3>
+<p>Buku</p>
+<p>Alat tulis</p>
+<p>Tas</p>
+<p>Sepatu</p>
+</div>
+
+<div class="kolom">
+<h3>Snack & Minuman</h3>
+<p>Makanan ringan</p>
+<p>Makanan berat</p>
+<p>Minuman dingin</p>
+<p>Minuman hangat</p>
+<p>Minuman kaleng</p>
+</div>
+
+<div class="kolom">
+<h3>Make Up</h3>
+<p>Bedak</p>
+<p>Lipstik</p>
+<p>Sunscreen</p>
+<p>Masker</p>
+<p>Moisturizer</p>
+<p>Eyeliner</p>
+</div>
+
+<div class="kolom">
+<h3>Kebutuhan</h3>
+<p>Sabun mandi</p>
+<p>Detergen</p>
+<p>Sabun cuci piring</p>
+<p>Sampo</p>
+<p>Celana & Baju</p>
+</div>
+
+</div>
+
+<!-- PRODUK -->
+<div class="produk">
+
+<h2>Produk</h2>
+
+<div class="card">
+<h3>Buku</h3>
+<p>Rp 35.000</p>
+<div class="jumlah">
+<button onclick="kurang(this)">-</button>
+<span>1</span>
+<button onclick="tambah(this)">+</button>
+</div>
+<button onclick="beli('Buku')">Pesan Sekarang</button>
+<button>Simpan Keranjang</button>
+</div>
+
+<div class="card">
+<h3>Lipstik</h3>
+<p>Rp 50.000</p>
+<div class="jumlah">
+<button onclick="kurang(this)">-</button>
+<span>1</span>
+<button onclick="tambah(this)">+</button>
+</div>
+<button onclick="beli('Lipstik')">Pesan Sekarang</button>
+<button>Simpan Keranjang</button>
+</div>
+
+<div class="card">
+<h3>Snack</h3>
+<p>Rp 15.000</p>
+<div class="jumlah">
+<button onclick="kurang(this)">-</button>
+<span>1</span>
+<button onclick="tambah(this)">+</button>
+</div>
+<button onclick="beli('Snack')">Pesan Sekarang</button>
+<button>Simpan Keranjang</button>
+</div>
+
+</div>
+
+<!-- TERIMAKASIH -->
+<div class="thanks">
+<h2>Terimakasih</h2>
+<p>Sudah Membeli Produk Kami,<br>Selamat Berkunjung Kembali</p>
+</div>
+
+<script>
+function beli(nama){
+window.open("https://wa.me/6285748916490?text=Saya ingin membeli "+nama);
+}
+
+function tambah(btn){
+let span = btn.parentElement.querySelector("span");
+span.innerText = parseInt(span.innerText)+1;
+}
+
+function kurang(btn){
+let span = btn.parentElement.querySelector("span");
+let jumlah = parseInt(span.innerText);
+if(jumlah>1){
+span.innerText = jumlah-1;
+}
+}
+</script>
+
+</body>
+</html>
